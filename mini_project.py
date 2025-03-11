@@ -134,8 +134,8 @@ try:
 
         # Pause after a batch to avoid detection
         if connections_sent % MAX_CONNECTIONS_PER_RUN == 0 and connections_sent < TARGET_CONNECTIONS:
-            print(f"Pausing for 5 minutes after {connections_sent} connections...")
-            time.sleep(30)
+            print(f"Pausing for 10 seconds after {connections_sent} connections...")
+            time.sleep(10)
 
 except Exception as e:
     print(f"Unexpected error: {e}")
