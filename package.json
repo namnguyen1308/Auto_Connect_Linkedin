@@ -1,0 +1,38 @@
+{
+  "name": "linkedin-connector-desktop",
+  "version": "1.0.0",
+  "description": "A desktop app to automate LinkedIn connections",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.2.1",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "python-shell": "^5.0.0"
+  },
+  "build": {
+    "appId": "com.example.linkedin-connector",
+    "files": [
+      "main.js",
+      "index.html",
+      "automation.py",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
